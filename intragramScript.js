@@ -1,5 +1,5 @@
 const modifingVid = () => {
-  const videoOnPageNotMod = document.querySelectorAll('video:not([mod="true"])')
+  const videoOnPageNotModded = document.querySelectorAll('video:not([mod="true"])')
 
   // function for edit video
   videoOnPageNotModded.forEach(video => {
