@@ -1,21 +1,21 @@
 const modifingVid = () => {
   const videoOnPageNotMod = document.querySelectorAll('video:not([mod="true"])')
 
-  // modifica pulsante tag nei video
+  // function for edit video
   videoOnPageNotModded.forEach(video => {
     const tagButton =
       video.parentElement.lastElementChild.lastElementChild.lastElementChild
 
     if (tagButton.classList.contains('_a9-5')) {
-      // appendi a suo genitore genitore precedente
+      // append tag button to his "grandparents"
       tagButton.parentElement.parentElement.appendChild(tagButton)
-      // modifica posizionamento
+      // move tag button 
       tagButton.style.cssText +=
         'bottom: 40px !important; left: unset !important; right: 4px !important;'
     }
   })
 
-  // modifica elemento video
+  // editing video
   videoOnPageNotModded.forEach(video => {
     video.setAttribute('controls', true)
     video.setAttribute('mod', true)
@@ -42,7 +42,7 @@ const modifingVid = () => {
     video.pause()
   })
 
-  // rimozione overlay
+  // remove overlay
   const videoOverlays = document.querySelectorAll(
     ' [data-visualcompletion="ignore"] '
   )
