@@ -26,6 +26,7 @@ const modifingVid = () => {
 
     video.onplay = () => {
       video.muted = false
+      video.volume = 0.5
     }
 
     video.onpause = () => {
